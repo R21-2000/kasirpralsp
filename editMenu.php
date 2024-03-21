@@ -46,7 +46,7 @@ if(isset($_GET['idMenu'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Edit Menu - TIMORESTO</title>
+    <title>Edit Menu - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 

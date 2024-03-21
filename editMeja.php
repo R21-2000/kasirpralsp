@@ -46,7 +46,7 @@ if(isset($_GET['idMeja'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Edit Meja - TIMORESTO</title>
+    <title>Edit Meja - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 

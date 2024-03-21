@@ -7,7 +7,7 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
 
 <head>
     <meta charset="utf-8">
-    <title>TIMORESTO</title>
+    <title>Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -46,14 +46,14 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a  class="navbar-brand mx-4 mb-3">
-                <h3 class="text-primary"><i class="fas fa-utensils me-2"></i>TIMORESTO</h3>
+                <h3 class="text-primary"><i class="fas fa-utensils me-2"></i>Sushilicious</h3>
                 </a>
                 
                 <div class="navbar-nav w-100">
                         <a href="admin.php" class="nav-item nav-link active">
-                            <i class="fa fa-keyboard me-2"></i>Entri Barang</a>
+                            <i class="fa fa-book-open me-2"></i>Input menu</a>
                         <a href="meja.php" class="nav-item nav-link">
-                            <i class="fa fa-keyboard me-2"></i>Entri Meja</a>
+                            <i class="fa fa-clipboard-list me-2"></i>Entri Meja</a>
 
                 </div>
                 
@@ -66,11 +66,8 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-    <a href="#" class="sidebar-toggler flex-shrink-0">
-        <i class="fa fa-bars"></i>
-
     </a>
-    <span class="d-none d-lg-inline-flex ms-auto text-secondary">HALAMAN ADMIN</span>
+    <span class="d-none d-lg-inline-flex ms-auto text-secondary">管理者ページ</span>
 
     <div class="navbar-nav align-items-center ms-auto">
         <div class="nav-item dropdown">
@@ -92,7 +89,7 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
             </a> <!-- Penutup tag a yang hilang -->
 
             <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                <a href="index.php" class="dropdown-item">Log Out</a>
+                <a href="index.php" class="dropdown-item">ログアウト</a>
             </div>
         </div>
     </div>
@@ -188,7 +185,7 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Create By Timotius Marcelino Modo
+                            @R21
                         </div>
                     </div>
                 </div>

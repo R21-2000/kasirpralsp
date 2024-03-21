@@ -27,7 +27,7 @@ if(isset($_POST['submit'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Tambah Menu - TIMORESTO</title>
+    <title>Tambah Menu - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 

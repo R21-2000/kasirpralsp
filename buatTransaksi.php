@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Tambah Pesanan - TIMORESTO</title>
+    <title>Tambah Pesanan - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 

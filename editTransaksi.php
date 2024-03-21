@@ -52,7 +52,7 @@ $result_pesanan = mysqli_query($koneksi, $query_pesanan);
 
 <head>
     <meta charset="utf-8">
-    <title>Edit Pesanan - TIMORESTO</title>
+    <title>Edit Pesanan - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
     <!-- Google Web Fonts -->

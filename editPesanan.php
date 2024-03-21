@@ -67,7 +67,7 @@ if(isset($_GET['idPesanan'])) {
 
 <head>
     <meta charset="utf-8">
-    <title>Edit Pesanan - TIMORESTO</title>
+    <title>Edit Pesanan - Sushilicious</title>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
