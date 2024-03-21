@@ -67,7 +67,7 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
     </a>
-    <span class="d-none d-lg-inline-flex ms-auto text-secondary">管理者ページ</span>
+    <span class="d-none d-lg-inline-flex ms-auto text-secondary">Admin</span>
 
     <div class="navbar-nav align-items-center ms-auto">
         <div class="nav-item dropdown">
