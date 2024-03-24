@@ -29,6 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif ($user['level'] == 'waiter') {
             header("Location: waiter.php");
             exit;
+        }  elseif ($user['level'] == 'kasir') {
+            header("Location: kasir.php");
+            exit;
+        } elseif ($user['level'] == 'owner') {
+            header("Location: owner.php");
+            exit;
         }
     } else {
         // Jika kredensial tidak cocok, tampilkan pesan kesalahan
