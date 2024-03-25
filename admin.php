@@ -50,8 +50,7 @@ include 'koneksi.php'; // Sisipkan file koneksi.php untuk mengakses variabel $na
                         <a href="admin.php" class="nav-item nav-link active">
                             <i class="fa fa-book-open me-2"></i>Input menu</a>
                         <a href="meja.php" class="nav-item nav-link">
-                            <i class="fa fa-clipboard-list me-2"></i>Entri Meja</a>
-
+                        <i class="fa-solid fa-list-check"></i>Entri Meja</a>
                 </div>
                 
             </nav>
