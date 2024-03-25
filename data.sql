@@ -29,7 +29,14 @@ CREATE TABLE IF NOT EXISTS `meja` (
   UNIQUE KEY `kodeMeja` (`kodeMeja`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.meja: ~6 rows (approximately)
+INSERT INTO `meja` (`idMeja`, `kodeMeja`, `keterangan`, `statusMeja`) VALUES
+	(2, 112, 'kapasitas 2 orang', 0),
+	(3, 113, 'kapasitas 3 orang', 0),
+	(5, 114, 'kapasitas 5 orrang', 1),
+	(6, 115, 'kapasitas 1 orang', 1),
+	(7, 116, 'kapasitas 10 orang\r\n', 1),
+	(12, 117, '1 orang', 1);
 
 -- Dumping structure for table resto.menu
 CREATE TABLE IF NOT EXISTS `menu` (
@@ -39,7 +46,15 @@ CREATE TABLE IF NOT EXISTS `menu` (
   PRIMARY KEY (`idMenu`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.menu: ~7 rows (approximately)
+INSERT INTO `menu` (`idMenu`, `namaMenu`, `harga`) VALUES
+	(3, 'Sushi', 50000),
+	(6, 'Udon', 40000),
+	(7, 'Gyoza', 20000),
+	(10, 'Katsu', 35000),
+	(11, 'Soba', 50000),
+	(14, 'Gyuukatsu', 110000),
+	(18, 'Kids meal', 30000);
 
 -- Dumping structure for table resto.pelanggan
 CREATE TABLE IF NOT EXISTS `pelanggan` (
@@ -51,7 +66,10 @@ CREATE TABLE IF NOT EXISTS `pelanggan` (
   PRIMARY KEY (`idPelanggan`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.pelanggan: ~2 rows (approximately)
+INSERT INTO `pelanggan` (`idPelanggan`, `namaPelanggan`, `jenisKelamin`, `noHp`, `alamat`) VALUES
+	(1, 'Kurt', 1, '0855522113', 'jl.rusak'),
+	(2, 'Chester', 1, '0877173822', 'jl.depan rumah');
 
 -- Dumping structure for table resto.pesanan
 CREATE TABLE IF NOT EXISTS `pesanan` (
@@ -72,7 +90,10 @@ CREATE TABLE IF NOT EXISTS `pesanan` (
   CONSTRAINT `pesanan_ibfk_5` FOREIGN KEY (`idMeja`) REFERENCES `meja` (`idMeja`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.pesanan: ~2 rows (approximately)
+INSERT INTO `pesanan` (`idPesanan`, `idMenu`, `idPelanggan`, `jumlah`, `idUser`, `idMeja`) VALUES
+	(6, 11, 2, 2, 5, 12),
+	(7, 18, 1, 4, 2, 5);
 
 -- Dumping structure for table resto.transaksi
 CREATE TABLE IF NOT EXISTS `transaksi` (
@@ -85,7 +106,9 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
   CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`idPesanan`) REFERENCES `pesanan` (`idPesanan`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.transaksi: ~1 rows (approximately)
+INSERT INTO `transaksi` (`idTransaksi`, `idPesanan`, `total`, `bayar`) VALUES
+	(6, 6, 50000, 60000);
 
 -- Dumping structure for table resto.user
 CREATE TABLE IF NOT EXISTS `user` (
@@ -96,7 +119,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Data exporting was unselected.
+-- Dumping data for table resto.user: ~5 rows (approximately)
+INSERT INTO `user` (`idUser`, `namaUser`, `password`, `level`) VALUES
+	(1, 'Andi', '111', 'administrator'),
+	(2, 'Kirana', '222', 'waiter'),
+	(3, 'Marx', '333', 'kasir'),
+	(4, 'Sky', '444', 'owner'),
+	(5, 'Kyle', '555', 'waiter');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

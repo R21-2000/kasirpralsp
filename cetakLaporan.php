@@ -6,14 +6,12 @@ include 'koneksi.php';
 require_once('tcpdf/tcpdf.php');
 
 // Extend TCPDF class to create custom header and footer
-class MYPDF extends TCPDF {
+class eksport extends TCPDF {
     // Page header
     public function Header() {
         // Set font
         $this->SetFont('helvetica', 'B', 12);
-        // Title
-
-        $this->Ln(5);
+        // Title        $this->Ln(5);
 
         $this->Cell(0, 10, 'Laporan Pesanan', 0, false, 'C', 0, '', 0, false, 'M', 'M');
 
@@ -33,7 +31,7 @@ class MYPDF extends TCPDF {
 }
 
 // Create new PDF document
-$pdf = new MYPDF();
+$pdf = new eksport();
 
 // Set document properties
 $pdf->SetCreator(PDF_CREATOR);
@@ -58,7 +56,7 @@ $query = "SELECT pesanan.idPesanan, pelanggan.namaPelanggan, menu.namaMenu, pesa
           INNER JOIN user ON pesanan.idUser = user.idUser";
 $result = mysqli_query($koneksi, $query);
 
-// Header
+// Bagian Header
 $pdf->SetFont('helvetica', 'B', 10);
 $pdf->Cell(20, 10, 'ID Pesanan', 1, 0, 'C');
 $pdf->Cell(40, 10, 'Nama Pelanggan', 1, 0, 'C');
@@ -67,7 +65,7 @@ $pdf->Cell(20, 10, 'Jumlah', 1, 0, 'C');
 $pdf->Cell(30, 10, 'Kode Meja', 1, 0, 'C');
 $pdf->Cell(40, 10, 'Nama User', 1, 1, 'C');
 
-// Data
+// Bagian Data
 $pdf->SetFont('helvetica', '', 10);
 while($row = mysqli_fetch_assoc($result)) {
     $pdf->Cell(20, 10, $row['idPesanan'], 1, 0, 'C');
@@ -79,6 +77,6 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 
-// Output PDF to browser
+// Output di browser
 $pdf->Output('laporan_pesanan.pdf', 'I');
 ?>
