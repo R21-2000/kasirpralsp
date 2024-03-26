@@ -1,0 +1,27 @@
+<?php
+
+// Koneksi database
+$koneksi = mysqli_connect('localhost', 'root', '', 'nama_database');
+
+// Ambil kata kunci
+$keyword = $_GET['keyword'];
+
+// Query pencarian
+$query = "SELECT * FROM produk WHERE nama_produk LIKE '%$keyword%'";
+$result = mysqli_query($koneksi, $query);
+
+// Tampilkan hasil
+while ($row = mysqli_fetch_assoc($result)) {
+  echo "<h3>{$row['nama_produk']}</h3>";
+  echo "<p>{$row['deskripsi']}</p>";
+}
+
+?>
+
+
+form
+
+<form action="search.php" method="get">
+  <input type="text" name="keyword" placeholder="Masukkan kata kunci">
+  <input type="submit" value="Cari">
+</form>
